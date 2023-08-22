@@ -1,0 +1,167 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Playfair_Regular";
+  src: url(../fonts/liber.ttf);
+}
+
+@font-face {
+  font-family: "Playfair_Bold";
+  src: url(../fonts/liber.ttf);
+}
+
+body {
+  color: #fefeff;
+  transition: 0.7s ease-in-out;
+  font-size: 16px;
+  background-image: url("../img/2033396.jpg");
+  background-size: cover;
+}
+
+@media (max-width: 768px) {
+  body {
+    background-size: contain;
+  }
+}
+
+.navbar {
+  background-size: cover;
+  background-position: center top;
+  border-bottom: 1px solid #1f3a4e;
+}
+
+.navbar .nav-link {
+  font-size: 20px;
+  font-family: "Playfair_Regular", sans-serif;
+  color: #ffffff;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  transition: color 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #287dbe !important;
+}
+
+.card-container {
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.card {
+  border: 1px solid #1f3a4e;
+  padding: 20px;
+  width: 300px;
+  border-radius: 8px;
+  height: 550px;
+  margin-bottom: 20px;
+
+  background: linear-gradient(to left, #080c16, #1f2e57, #394865);
+}
+
+.card h3 {
+  margin-top: 0;
+  color: #ffffff;
+  font-family: "Playfair_Bold", sans-serif;
+  text-align: center;
+  font-weight: 600;
+}
+
+.card p {
+  color: #ffffff;
+  font-family: "Playfair_Regular", sans-serif;
+}
+
+.card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  animation: moveUpDown 10s infinite alternate;
+  transition: box-shadow 0.2s;
+}
+
+@keyframes moveUpDown {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(10px);
+  }
+}
+
+.card img:hover {
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+  animation-play-state: paused; /* Met en pause l'animation au survol */
+}
+
+.bouttonTri .triParTemperature button {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  color: #ffffff;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  line-height: 1.5;
+  margin-top: 8px;
+  margin-left: 5px;
+  font-size: 20px;
+  font-family: "Playfair_Regular", sans-serif;
+}
+
+.navbar-nav .nav-link,
+.bouttonTri .triParTemperature button {
+  color: #ffffff;
+  transition: color 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover,
+.bouttonTri .triParTemperature button:hover {
+  color: #287dbe !important;
+}
+
+@media (max-width: 767px) {
+  .navbar-image {
+    display: none;
+  }
+}
+
+.create {
+  color: #fefeff;
+  display: grid;
+  justify-content: center;
+}
+
+.create input {
+  margin-bottom: -20px;
+}
+
+.createCard {
+  background-color: #f7f7f7;
+  border: 1px solid #ddd;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 50px;
+}
+
+.createCard label {
+  font-weight: bold;
+  text-align: center;
+}
+
+.createCard button {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.deconnexion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
